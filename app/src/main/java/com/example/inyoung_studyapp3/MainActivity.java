@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Layout;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -34,8 +35,15 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.lvMemo);
         scrollView = (ScrollView) findViewById(R.id.scrollView);
 
-        ListAdapter listAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, item);
+        ListAdapter listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, item);
         listView.setAdapter(listAdapter);
+        listView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                scrollView.requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
 
         liCanvas.addView(new GraphCanvas(this));
 

@@ -99,7 +99,6 @@
                     android:id="@+id/graphView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-
                 <LinearLayout
                     android:id="@+id/liCanvas"
                     android:layout_width="match_parent"
@@ -107,7 +106,6 @@
                     android:layout_margin="7dp"
                     android:background="#66fd5fc7"
                     android:orientation="vertical"></LinearLayout>
-
                 <view
                     android:id="@+id/vCalendar"
                     class="androidx.appcompat.app.AlertController$RecycleListView"
