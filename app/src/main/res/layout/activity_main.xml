@@ -51,8 +51,10 @@
         android:orientation="vertical">
 
         <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,13 +100,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
-
                 <LinearLayout
                     android:id="@+id/liCanvas"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:orientation="horizontal">
-                </LinearLayout>
+                    android:layout_height="240dp"
+                    android:layout_margin="7dp"
+                    android:background="#66fd5fc7"
+                    android:orientation="vertical"></LinearLayout>
+
+                <view
+                    android:id="@+id/vCalendar"
+                    class="androidx.appcompat.app.AlertController$RecycleListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                </view>
+
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
